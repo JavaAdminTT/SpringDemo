@@ -17,6 +17,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import com.seyong.tx.beans.BookStore;
+import com.seyong.tx.service.BookService;
 import com.seyong.tx.service.impl.BookServiceImpl;
 
 public class SpringTx {
@@ -29,7 +30,7 @@ public class SpringTx {
 	@Test
 	public void txTest01() {
 		
-		BookServiceImpl bean = (BookServiceImpl) ioc.getBean("bookServiceImpl");
+		BookService bean = (BookService) ioc.getBean("bookServiceImpl");
 		bean.checkOut(1, "JAVA");
 	}
 	
