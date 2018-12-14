@@ -8,6 +8,17 @@
 </head>
 <body>
 
-<a href="/SpringMVC/springmvc/hello">Hello_SpringMVC</a>
+<a href="/SpringMVC/param?id=789">Hello_SpringMVC</a><br><br>
+
+<form action="/SpringMVC/login" method="post">
+
+	UserName: <input type="text" name="userName"><br>
+	Password:  <input type="password" name="password"><br>
+	Age :          <input type="text" name="age"><br>
+	Gender:      <input type="text" name="gender"><br>
+	
+	<input type="submit" value="login">
+
+</form>
 </body>
 </html>

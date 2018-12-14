@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Very Nice...!!</h1>
+	<h1>Very Nice...!!</h1><br>
+	
+	${user.userName }
 </body>
 </html>
