@@ -9,6 +9,8 @@
 <body>
 	<h1>Very Nice...!!</h1><br>
 	
-	${user.userName }
+	${requestScope.user}<br><br>
+	
+	${sessionScope.user }
 </body>
 </html>
