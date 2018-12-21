@@ -1,0 +1,1628 @@
+<!DOCTYPE NoteCase-File>
+<!--LastNote:36-->
+<HTML>
+<HEAD>
+<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+<meta name="generator" content="NoteCase 1.9.8">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<DL>
+<DT>第01章 基础知识 </DT>
+<!--property:date_created=1480649974-->
+<!--property:date_modified=1480670694-->
+<DD>
+进入控制台<BR>
+windows + r -&gt; cmd -&gt; 回车<BR>
+<BR>
+工作目录<BR>
+前导符左侧的目录, 也称为当前目录<BR>
+<BR>
+相对路径<BR>
+相对于当前工作目录的.<BR>
+<BR>
+<BR>
+绝对路径 <BR>
+以根目录开始的路径<BR>
+<BR>
+<BR>
+dir (directory)<BR>
+列出当前工作目录下的子文件和子目录<BR>
+<BR>
+命令行参数 <BR>
+跟在命令后面, 起补充数据说明的作用<BR>
+<BR>
+<BR>
+md (make directory)<BR>
+md 新目录名 <BR>
+<BR>
+切换盘符<BR>
+D:<BR>
+<BR>
+rd (remove directory)删除目录<BR>
+rd 目录名<BR>
+<BR>
+cd (change directory) 切换工作目录<BR>
+<BR>
+start 以当前目录为工作目录再启动一个窗口<BR>
+start . 用资源管理器打开目标目录<BR>
+<BR>
+del 文件名 <BR>
+删除文件(不经过回收站)<BR>
+<BR>
+exit<BR>
+退出当前命令行<BR>
+<BR>
+// 创建目录 d:\MyWork\JavaCode\day01<BR>
+<BR>
+<BR>
+<BR>
+Java的特性<BR>
+1) 简单 : 相对于C++,HTML等<BR>
+2) 面向对象 : 问题的解决依赖于具有功能的对象.<BR>
+3) 分布式 : 多电脑通过网络解决一个问题.<BR>
+4) 健壮 : 强类型, 异常的处理, 垃圾回收, 指针的安全化.<BR>
+5) 安全 : 所有的程序的执行必须通过类加载器的检查<BR>
+6) 跨平台 : JVM跨平台<BR>
+7) 性能略好 : 比C慢,比脚本快.<BR>
+8) 多线程 : 最大化利用CPU, 最终程序运行在服务器,面向多用户!!<BR>
+<BR>
+安装NotePad++<BR>
+把HexEditor.dll文件复制到D:\MyWork\Notepad++\plugins<BR>
+<BR>
+开发第一个程序 :<BR>
+1) 编译代码, 保存在一个文件名为.java文件中<BR>
+	在目录中新建一个文本文件, 名为Hello.java<BR>
+	用notepad++把文件打开,进行编辑<BR>
+2) 使用javac 把.java文件编译成 .class字节码文件<BR>
+	进入命令行, 切换到源文件所在的目录cd MyWork\JavaCode\day01<BR>
+	javac Hello.java<BR>
+3) 使用java 执行.class字节码<BR>
+	java Hello<BR>
+<BR>
+<BR>
+源文件<BR>
+	类 {<BR>
+		方法{<BR>
+			语句1,<BR>
+			语句2....		<BR>
+		}<BR>
+<BR>
+	}	<BR>
+<BR>
+打印矩形<BR>
+**********<BR>
+**********<BR>
+**********<BR>
+**********<BR>
+<BR>
+<BR>
+一个java程序的执行<BR>
+java 主类<BR>
+执行时创建JVM, 并且加载主类.class文件, 找到其中的主方法, 然后按顺序逐行执行主方法中的语句<BR>
+主方法中的语句全部执行完以后, JVM就自动销毁了.<BR>
+<BR>
+<BR>
+// NotePad++中的快捷键<BR>
+// ctrl + c复制<BR>
+// ctrl + v粘贴<BR>
+// ctrl + s保存<BR>
+// ctrl + x剪切 <BR>
+// ctrl + z撤销<BR>
+// ctrl + y重做<BR>
+// ctrl + a全选<BR>
+// shift+tab整体左移<BR>
+// tab整体右移<BR>
+// ctrl + f打开搜索窗口<BR>
+<BR>
+// ctrl + d快速复制当前行<BR>
+// ctrl + l快速删除当前行<BR>
+<BR>
+<BR>
+命名规则:<BR>
+1) 只能由52个字母和10个数字组成 <BR>
+2) 数字不可以开头<BR>
+3) 不能使用关键字和保留字,但是可以包含关键字和保留字<BR>
+<BR>
+规范: 当成规则来看待<BR>
+1) 包名 全部小写<BR>
+2) 类名 首字母大写, 后面的每个单词的首字母大写<BR>
+3) 变量名和方法名 和类名唯一的区别就是首字母 <BR>
+4) 常量名全部大写, 单词间用_隔开.<BR>
+<BR>
+<BR>
+	
+</DD>
+<DT>第02章 基本语法</DT>
+<!--property:date_created=1480725651-->
+<!--property:date_modified=1480725651-->
+<DD>
+<DL>
+<DT>考试1</DT>
+<!--property:date_created=1480725675-->
+<!--property:date_modified=1480728045-->
+<DD>
+1.	写出java语言的8个特性<BR>
+	1) 简单 比C++简单<BR>
+	2) 面向对象 : 先找到具有功能的对象,使用对象来完成功能<BR>
+	3) 分布式 : 网络 <BR>
+	4) 健壮 : 内存泄漏(GC), C语言中 指针(内存地址)是可以参与计算. 异常的处理.<BR>
+	5) 安全 : 程序的执行必须通过类加载器的检查!!<BR>
+	6) 跨平台 : JVM跨平台<BR>
+	7) 性能略好 : 比脚本快, 比C慢<BR>
+	8) 多线程 : 最大化利用CPU, 多线程可以解决用多用户.<BR>
+<BR>
+2.	描述PATH环境变量的作用<BR>
+	命令行在执行命令时进行程序的搜索定位, 就是通过扫描 path中的多个目录<BR>
+<BR>
+<BR>
+3.	描述一下语句,类,和方法之间的关系.<BR>
+	类中包含多个方法, 方法又包含多条语句, 语句必须以;结尾<BR>
+<BR>
+<BR>
+4.	变量是什么?<BR>
+	内存中的一块被命名的,且有特定的数据类型约束的区域, 区域中可以保存符合数据类型的数据, 并且其中的数据<BR>
+	可以在其范围内随意变化. 同一时刻只允许有一个值.<BR>
+<BR>
+<BR>
+5.	使用变量有哪些注意事项(至少3点)?<BR>
+	1) 先声明, 后使用. 声明的作用就是开辟空间.<BR>
+	2) 变量必须初始化赋值.<BR>
+	3) 变量必须有数据类型.<BR>
+	4) 变量必须有名字<BR>
+	5) 变量有其作用范围 {}. 看它的声明语句在哪个范围, 出了这个范围变量就不可以使用了<BR>
+	6) 变量在其作用范围内, 只能声明一次 <BR>
+	{<BR>
+		int a; <BR>
+		//double a; 不允许<BR>
+	}<BR>
+	{<BR>
+		int a;<BR>
+	}<BR>
+<BR>
+<BR>
+
+</DD>
+<DT>复习1</DT>
+<!--property:date_created=1480728247-->
+<!--property:date_modified=1480729338-->
+<DD>
+变量 : 数据类型 变量名<BR>
+声明 : <BR>
+	数据类型 变量名;<BR>
+	<BR>
+	变量名= 初始值;<BR>
+	<BR>
+声明和初始化 <BR>
+	数据类型 变量名 = 初始值;<BR>
+	<BR>
+常量 : 其中的值不允许改变的量<BR>
+	常量 = 值;<BR>
+	<BR>
+根据数据类型来分<BR>
+	1) 基本数据类型(内存区域中保存的数据本身)<BR>
+		1) 数值型 <BR>
+			整数<BR>
+				int 		4	-20多亿~20多亿<BR>
+				byte		1	-128~127<BR>
+				short		2	-32768~32767<BR>
+				long		8	-巨大值 ~ 巨大值<BR>
+			浮点数<BR>
+				float		4	-10的38次方~10的38次方 N*10^M<BR>
+				double	8 	-10的308次方~10的308次方<BR>
+		2) 字符型 <BR>
+			char	2<BR>
+		3) 布尔型<BR>
+			boolean 1<BR>
+		<BR>
+	2) 引用数据类型(内存区域中保存的其他数据的地址)<BR>
+	
+</DD>
+<DT>考试2</DT>
+<!--property:date_created=1480898739-->
+<!--property:date_modified=1480901730-->
+<DD>
+1.	变量按照数据类型来分, 分为基本数据类型变量和引用数据类型变量, 请写出基本数据类型变量和引用数据类型变量的区别.<BR>
+	基本数据类型变量中保存的是数据本身, 引用类型变量中保存的是别的数据的地址<BR>
+	<BR>
+2.	基本数据类型有8种, 写出8种基本数据类型, 并用的16进制形式写出所有整数数据类型(包括char)的最小值和最大值<BR>
+	byte short int long float double char boolean<BR>
+	byte	<BR>
+	1000 0000 , 0111 1111<BR>
+	0x80~0x7F<BR>
+	short<BR>
+	0x8000~0x7FFF<BR>
+	int<BR>
+	0x80000000~0x7FFFFFFF<BR>
+	long<BR>
+	0x8000000000000000~0x7FFFFFFFFFFFFFF<BR>
+	char<BR>
+	0x0000~0xFFFF <BR>
+	<BR>
+3.	计算下列结果, 分析过程, 只需要计算到十六进制形式即可.<BR>
+	int a = 0x6B;<BR>
+	int b = 0x5D;<BR>
+	// 0110 1011<BR>
+	// 0101 1101<BR>
+	System.out.println(a &amp; b);<BR>
+	// 0100 1001 -&gt; 0x49 -&gt; 73<BR>
+	System.out.println(a | b);<BR>
+	// 0110 1011 |<BR>
+	// 0101 1101<BR>
+	// 0111 1111 -&gt; 127<BR>
+	<BR>
+	System.out.println(a ^ b);<BR>
+	// 0110 1011 ^<BR>
+	// 0101 1101<BR>
+	// 0011 0110 -&gt; 0x36 -&gt; 54<BR>
+	<BR>
+	System.out.println(~a);<BR>
+	// 0110 1011<BR>
+	// 1111 1111 1111 1111 1111 1111 1001 0100<BR>
+	// 负数<BR>
+	// 1111 1111 1111 1111 1111 1111 1001 0011 -&gt;<BR>
+	// 0110 1100 -&gt; 0x6C -&gt; 108 所以是-108 <BR>
+4.	判断下列的带( )行的对错<BR>
+	int i1 = 20;<BR>
+	short s1 = i1; (错 )<BR>
+	char c1 = 97; (对)<BR>
+	char c2 = '我' - '你';(对)<BR>
+	char c3 = (char)(c1 - 32);(对) <BR>
+	float f1 = i1;( 对)<BR>
+	long l1 = 234234239933;(错 )<BR>
+	f1 = l1 * 20;(对)<BR>
+	double d1 = .342;<BR>
+	d1 = i1 * f1 * l1;(对)<BR>
+	l1 = f1 / 10000;(错)<BR>
+	boolean b1 = (boolean)1;(错)<BR>
+<BR>
+5.	十六进制表示的数比十进制要大, 对或错? 为什么?<BR>
+	错, 不一定<BR>
+	<BR>
+	<BR>
+	<BR>
+	<BR>
+	
+</DD>
+<DT>复习2</DT>
+<!--property:date_created=1480901808-->
+<!--property:date_modified=1480903837-->
+<DD>
+变量 : 内存中的一块被命名的并且有特定数据类型的区域, 在此区域中可以保存数据, 直到被重写或断电.<BR>
+使用注意事项 : <BR>
+	1) 先声明, 后使用.<BR>
+	2) 必须有数据类型.<BR>
+	3) 必须有初始化值<BR>
+	4) 其中的数据在其范围内可以随意变化 <BR>
+	5) 必须有名字.<BR>
+	6) 变量有其范围, 在一对{}内, 声明语句所在的{}<BR>
+	7) 变量在其范围内只能声明一次<BR>
+	<BR>
+变量的分类 <BR>
+	1) 按数据类型来分<BR>
+		1) 基本数据类型(区域中保存的是数据本身)<BR>
+			1) 数值型<BR>
+				1) 整数<BR>
+					byte		1<BR>
+					short	2<BR>
+					char		2<BR>
+					int		4<BR>
+					long		8<BR>
+				2) 浮点数<BR>
+					float		4<BR>
+					double	8<BR>
+				数值型变量间可以相互赋值, 如果是范围小的给范围大的赋值, 无障碍<BR>
+				如果范围大的给范围小的赋值, 则不允许, 必须强制类型转换后才能!!<BR>
+<BR>
+				范围从大到小<BR>
+				double &gt; float &gt; long &gt; int &gt; short &gt; byte<BR>
+										&gt; char				<BR>
+			2) 布尔型<BR>
+				boolean 只能用true和false<BR>
+		2) 引用数据类型(区域中保存的是其他数据的地址, 地址就是内存中的每个字节都有的编号,从1开始,所以0是空地址)<BR>
+			String str = null;<BR>
+			String str = &quot;&quot;;<BR>
+	2) 按其所属范围来分<BR>
+		1) 局部变量: 范围小, 寿命短<BR>
+			在方法中声明的变量<BR>
+		2) 成员变量: 范围大, 寿命长<BR>
+			在方法外类中声明的变量					
+</DD>
+<DT>考试3</DT>
+<!--property:date_created=1480985123-->
+<!--property:date_modified=1480987309-->
+<DD>
+1.	列出变量的使用注意事项(至少6点)<BR>
+	1) 先声明,后使用<BR>
+	2) 必须对其初始化赋值? <BR>
+	3) 变量必须得有数据类型? 作用是. 规范空间中能存什么数据, 数据的含义是什么, 能进行操作<BR>
+	4) 变量必须得有名字, 作用是, 在内存中定位变量位置<BR>
+	5) 变量有其作用范围. 看它的声明语句所在的{}<BR>
+	6) 变量在其作用范围内, 只能声明一次.<BR>
+	7) 变量内存空间中同一时间只能保持一个值, 其中的值可以在其范围内变化.<BR>
+<BR>
+<BR>
+2.	变量分类有两种分法, 第一种是按数据类型来分,另外一种是按照声明位置来分, 每一种又各分为哪些种类型. 各有什么特点?<BR>
+	<BR>
+	1) 数据类型来分<BR>
+		1) 基本数据类型(内存空间中保存的是数据本身)<BR>
+			1) 数值型<BR>
+				1) 整数<BR>
+					byte<BR>
+					short<BR>
+					int<BR>
+					long<BR>
+					char<BR>
+				2) 浮点数<BR>
+					float<BR>
+					double<BR>
+			2) 布尔型<BR>
+				boolean <BR>
+		2) 引用数据类型(内存空间中保存的是其他数据的地址)0地址代表null, 空地址.<BR>
+	2) 声明位置来分<BR>
+		1) 在方法中声明 : 局部变量 特点 : 范围小, 寿命短<BR>
+		2) 在方法外类中 : 成员变量 特点 : 范围大, 寿命长<BR>
+<BR>
+<BR>
+3.	运算符%的作用是什么? 有什么实际的应用?<BR>
+	取余数, 判断整除, 判断奇偶, 判断质数, 把数据缩小到某范围内.<BR>
+<BR>
+<BR>
+4.	判断:<BR>
+	1) if else if else if else 语句中, 如果同时有多个条件都为true, 那么将会有多个语句块被执行<BR>
+		不对, 因为它是分支, 多个语句块只能有一个执行.<BR>
+	2) switch case case default 语句中, 如果同时有多个条件都为true, 那么将会有多个语句块被执行<BR>
+		不对, 如果没有break才是如此<BR>
+<BR>
+<BR>
+5.	在switch结构中, switch()括号中的要求具体是什么? case后面的要求又是什么?<BR>
+	变量, 并且类型必须是除long外的整数和String, 枚举.<BR>
+	case后面必须跟常量(字面量)<BR>
+	<BR>
+	<BR>
+	
+</DD>
+<DT>复习3</DT>
+<!--property:date_created=1480992080-->
+<!--property:date_modified=1481011401-->
+<DD>
+循环 : 当条件满足时, 反复执行某段代码.<BR>
+<BR>
+需要4个语句<BR>
+1) 初始化语句(只执行一次)<BR>
+2) 条件判断(为真,进入循环, 为假 结束循环)<BR>
+3) 循环体 (被多次执行)<BR>
+4) 迭代语句 (使循环趋于结束)<BR>
+<BR>
+while (条件) {<BR>
+	循环体;<BR>
+}<BR>
+<BR>
+do {<BR>
+	循环体;<BR>
+} while (条件);<BR>
+<BR>
+for (初始化语句; 条件 ; 迭代语句) {<BR>
+	循环体;<BR>
+}<BR>
+<BR>
+for (A ; B ; C) {<BR>
+	D;<BR>
+}<BR>
+A B D C B D C B D C B D ..... B<BR>
+<BR>
+三个循环:<BR>
+<BR>
+//循环0-N次<BR>
+while (条件) {<BR>
+	循环体;<BR>
+}<BR>
+<BR>
+boolean b = false;<BR>
+while (b) {<BR>
+	System.out.println(&quot;a&quot;);<BR>
+}<BR>
+<BR>
+// 循环1-N次<BR>
+do {<BR>
+	循环体;<BR>
+} while (条件);<BR>
+<BR>
+do {<BR>
+	System.out.println(&quot;a&quot;);<BR>
+} while (b);<BR>
+<BR>
+for (初始化语句; 条件 ; 迭代语句) {<BR>
+	循环体;<BR>
+}<BR>
+<BR>
+for (int i = 0; i &lt; 100; i++) {<BR>
+}<BR>
+<BR>
+// for适用于循环次数确定的循环<BR>
+// while和dowhile适用于循环不确定的循环<BR>
+<BR>
+boolean b = true;<BR>
+while (b) {}<BR>
+<BR>
+for (;;) {}<BR>
+for(;true;) {}<BR>
+for(int i = 0; i &lt; 10; i--) {}<BR>
+<BR>
+<BR>
+<BR>
+
+</DD>
+<DT>考试4</DT>
+<!--property:date_created=1481071516-->
+<!--property:date_modified=1481073468-->
+<DD>
+1.	列出变量的使用注意事项(至少6点)(尝试解释一下原因)<BR>
+	1) 先声明,后使用. <BR>
+	2) 必须对其进行初始化.<BR>
+	3) 必须有数据类型, 数据类型可以约束范围, 规范它能有哪些操作<BR>
+	4) 必须有名字<BR>
+	5) 变量有其作用范围 : 声明语句所隶属的{}<BR>
+	6) 变量在其范围内, 只能声明一次<BR>
+	7) 可以保持一个值, 直到改变或程序结束<BR>
+<BR>
+<BR>
+2.	变量分类有两种分法, 第一种是按数据类型来分,另外一种是按照声明位置来分, 每一种又各分为哪些种类型. 各有什么特点?<BR>
+	1) 类型<BR>
+		1) 基本数据类型(存数据本身) <BR>
+			1) 数值型'<BR>
+				1) 整数<BR>
+				2) 浮点数<BR>
+			2) 布尔型<BR>
+		2) 引用数据类型(存其他数据的地址)<BR>
+	2) 声明位置	<BR>
+		1) 局部变量 : 在方法中声明的变量 : 范围小, 寿命短<BR>
+		2) 成员变量 : 在方法外类中声明 : 范围大, 寿命长<BR>
+<BR>
+<BR>
+3.	for循环的结构是什么? 执行流程是如何? 三个循环的区别是什么?选择依据是什么?<BR>
+	for (初始化语句A; 条件B; 迭代语句C) {<BR>
+		循环体D;	<BR>
+	}<BR>
+	A B D C B D C B D ..... B<BR>
+	<BR>
+	while 执行 0-N<BR>
+	do while 	执行1-N<BR>
+	for 的循环次数最清晰 执行0-N<BR>
+	<BR>
+	循环次数确定的情况选择for<BR>
+	循环次数不确定选择while, do while<BR>
+<BR>
+4.	写程序, 打印一个倒直角三角形.只需要写出main方法中的代码.<BR>
+	for (int i = 0; i &lt; 10; i++) {<BR>
+		for (int j = 0; j &lt; 10 - i; j++) {<BR>
+			System.out.print(&quot;*&quot;);		<BR>
+		}<BR>
+		System.out.println();	<BR>
+	}<BR>
+<BR>
+<BR>
+5.	简述break语句和continue语句的作用.<BR>
+	break 可以提前结束指定的循环.<BR>
+	continue 可以提前结束指定的循环的当次循环, 直接进入下一次循环的开始 while(条件)<BR>
+	<BR>
+	
+</DD>
+<DT>考试5</DT>
+<!--property:date_created=1481245231-->
+<!--property:date_modified=1481246301-->
+<DD>
+1.	写出while循环和do while循环的区别, 三个循环分别在什么场景下使用?<BR>
+	do while 循环1-N次, while 循环0-N次<BR>
+	循环次数不确定 用 while或do while<BR>
+	反之用for<BR>
+<BR>
+<BR>
+2.	如何声明定义一个方法?<BR>
+	在类中 <BR>
+	修饰符 返回值类型 方法名(参数类型1 形参1, 参数类型2 形参2, 参数类型3 形参3...) {<BR>
+		代码块;<BR>
+		return 真的值;<BR>
+	}<BR>
+<BR>
+<BR>
+3.	如何调用一个带有形参的方法? 形参的作用是什么? 如何调用一个没有任何参数的方法?<BR>
+	在代码中 <BR>
+<BR>
+	方法名(实参1, 实参2, 实参3...);<BR>
+		<BR>
+	接收调用者传递的实际数值, 在方法体中使用.<BR>
+	<BR>
+	调用无参方法<BR>
+	方法名();<BR>
+<BR>
+<BR>
+4.	方法的返回值是什么? 如何使用这个返回值?<BR>
+	方法的执行完毕后返回的一个具体的数据值, <BR>
+	变量 = 方法调用;<BR>
+<BR>
+<BR>
+5.	什么是方法重载, 为什么要方法重载?<BR>
+	在同一个类中, 方法名相同, 参数不同(数量不同, 类型不同, 顺序不同)<BR>
+	给调用者统一的名称!! 方便调用者.<BR>
+<BR>
+<BR>
+	
+</DD>
+<DT>复习</DT>
+<!--property:date_created=1481246459-->
+<!--property:date_modified=1481246584-->
+<DD>
+class A {<BR>
+	<BR>
+	void m(int n) {}<BR>
+	void m(double d) {}<BR>
+	void m(byte b) {}<BR>
+	<BR>
+	main() {<BR>
+		m(3);<BR>
+		m(2.0);<BR>
+		m((byte)4);	<BR>
+	}<BR>
+<BR>
+}
+</DD>
+</DL>
+
+</DD>
+<DT>第03章 类和对象</DT>
+<!--property:date_created=1481330522-->
+<!--property:date_modified=1481330522-->
+<DD>
+<DL>
+<DT>考试1</DT>
+<!--property:date_created=1481330533-->
+<!--property:date_modified=1481332463-->
+<DD>
+1.	什么是类, 什么是对象, 什么是实例?<BR>
+	类 : 对现实世界事物的抽象定义. 由class关键字标识, 类是一种引用类型. 类是一个模板.<BR>
+	对象 : 类的实实在在的存在的实例. <BR>
+<BR>
+2.	类中有哪些成员? 各有什么作用? 成员意味着什么? 什么是封装? 如何封装?<BR>
+	1) 属性 : 用于描述事物的特征<BR>
+	2) 方法 : 用于描述事物的行为<BR>
+	3) 构造器 : 用于在创建对象时执行的初始化操作(通常是对属性的初始化)<BR>
+	<BR>
+	成员意味着都在同一个类中, 成员之间可以随意互相访问.<BR>
+	<BR>
+	封装 : 把类中成员私有化(private)<BR>
+<BR>
+3.	Teacher t = new Teacher(); 这个语句中的t究竟是什么? <BR>
+	t是一个自定义类型Teacher的类型的一个引用变量.<BR>
+<BR>
+4.	Teacher t1 = new Teacher();<BR>
+	Teacher tmp = t1;<BR>
+	Teacher t2 = new Teacher();<BR>
+	t1 = t2;<BR>
+	t2 = tmp;<BR>
+<BR>
+	以上代码中创建了几个对象? B<BR>
+	A. 1个	B.2个	C.3个	D.4个<BR>
+<BR>
+<BR>
+5.	什么是垃圾对象? 垃圾对象会被立刻清理吗? 如何清理垃圾?<BR>
+	不再被引用变量指向的对象, 不一定, GC说了算<BR>
+<BR>
+<BR>
+
+</DD>
+<DT>复习</DT>
+<!--property:date_created=1481332551-->
+<!--property:date_modified=1481333443-->
+<DD>
+类的设计是面向对象程序设计的核心.<BR>
+<BR>
+构造器 : 在创建对象时进行初始化<BR>
+特点 : <BR>
+	1) 方法名和类名一致<BR>
+	2) 没有返回值, 甚至连void也不允许<BR>
+	3) 只能在new对象时调用一次, 不能再调用了.<BR>
+<BR>
+public class ClassName {<BR>
+	<BR>
+	// 属性<BR>
+	private DataType1 field1;<BR>
+	private DataType2 field2 = defaultValue;<BR>
+	private DataType3 field3; <BR>
+	...<BR>
+	<BR>
+	// 缺省构造器是由编译器添加的<BR>
+	public ClassName() {<BR>
+	}<BR>
+	<BR>
+	// 私有属性提供公共的set/get方法 getters and setters<BR>
+	public void setField1(DataType1 field1) {<BR>
+		this.field1 = field1;	<BR>
+	}<BR>
+	<BR>
+	public DataType1 getField1() {<BR>
+		return field1;	<BR>
+	}<BR>
+	<BR>
+	public void setField2(DataType2 field2) {<BR>
+		this.field2 = field2;	<BR>
+	}<BR>
+	<BR>
+	public DataType2 getField2() {<BR>
+		return field2;	<BR>
+	}		<BR>
+	<BR>
+	public void setField3(DataType3 field3) {<BR>
+		this.field3 = field3;	<BR>
+	}<BR>
+	<BR>
+	public DataType3 getField3() {<BR>
+		return field3;	<BR>
+	}			<BR>
+	<BR>
+	public String say() {<BR>
+		String str = &quot;属性1说明:&quot; + field1 + &quot;,属性2说明:&quot; + field2 + &quot;,属性3说明:&quot; + field3;<BR>
+		return str;	<BR>
+	}<BR>
+<BR>
+}<BR>
+<BR>
+main() {<BR>
+	// 创建对象, 依据类模板来创建<BR>
+	ClassName cn = new ClassName();<BR>
+	cn.setField1(值1);<BR>
+	String str = cn.say();<BR>
+	System.out.println(str);<BR>
+	<BR>
+}
+</DD>
+<DT>考试2</DT>
+<!--property:date_created=1481502407-->
+<!--property:date_modified=1481506344-->
+<DD>
+1.	什么是构造器,作用是什么? 有什么特点(3点)<BR>
+	构造方法, 在创建对象时进行的初始化工作(通常是对属性初始化).<BR>
+	1) 方法名和类名一致<BR>
+	2) 没有返回值, 连void也没有<BR>
+	3) 只能调用一次, 且就是在创建对象时调用, 不能像普通方法随意调用.<BR>
+<BR>
+<BR>
+2.	创建一个对象的步骤(7步)<BR>
+	1) 在永久区 检查要创建的对象隶属的类模板信息存在不存在.<BR>
+	2) 如果存在, 则不处理, 否则才加载一次类模板信息, 保证在永久区中只有一份类模板.<BR>
+	3) 根据类模板中的所有属性的定义, 在GC区中开辟适当的空间.<BR>
+	4) 把此空间中的所有字节写0<BR>
+	5) 如果有显式赋值则执行显式赋值, 这才是初始化赋值<BR>
+	6) 执行构造器, 如果属性没有显式赋值,那么 在构造器中的赋值也称为初始化赋值.<BR>
+	7) 返回对象的首地址<BR>
+<BR>
+<BR>
+3.	JavaBean是什么? 有什么特点?(3个)<BR>
+	是java中可重用的组件. 最大的作用是携带数据.<BR>
+	1) 类是公共的, 最大作用 : 跨包使用.<BR>
+	2) 必须有公共无参构造器, 可以方便地创建对象.<BR>
+	3) 有属性, 有公共的get/set方法.<BR>
+<BR>
+<BR>
+4.	package语句的作用是什么? 一旦使用了package语句, 需要注意什么?<BR>
+	告诉编译器当前源文件中的所有类 最终生成class文件要保存的包目录结构.<BR>
+	注意:	<BR>
+	1) 编译时必须使用 -d 选项<BR>
+	2) 类的使用不能使用简单类名, 必须使用全限定名称, 全限定类名就是包.子包.子包.类 <BR>
+<BR>
+<BR>
+5.	import语句的作用是什么? <BR>
+	告诉编译器, 当前源文件中的类中要使用的其他包中的类在哪里.<BR>
+	import a.A;<BR>
+	new b.A();<BR>
+<BR>
+	
+</DD>
+<DT>复习2</DT>
+<!--property:date_created=1481506440-->
+<!--property:date_modified=1481507066-->
+<DD>
+类 : 对事物的描述<BR>
+对象 : 类的实例.<BR>
+<BR>
+类的设计是重点 : <BR>
+用属性描述事物的特征<BR>
+用方法描述事物的行为<BR>
+<BR>
+public class ClassName {<BR>
+	<BR>
+	// 对象属性<BR>
+	private DataType1 field1;<BR>
+	private DataType2 field2 = 值2;<BR>
+	....<BR>
+	<BR>
+	// 构造器<BR>
+	public ClassName() {<BR>
+		this(值11, 值12 ...);	<BR>
+	}<BR>
+	<BR>
+	public ClassName(DataType1 field1, DataType2 field2...) {<BR>
+		this.field1 = field1;<BR>
+		this.field2 = field2;<BR>
+		....	<BR>
+	}<BR>
+	<BR>
+	// 普通方法, 对象方法<BR>
+	public void setField1(DataType1 field1) {<BR>
+		this.field1 = field1;	<BR>
+	}	<BR>
+	<BR>
+	public DataType1 getField1() {<BR>
+		return field1;<BR>
+	}<BR>
+	<BR>
+	public void setField2(DataType2 field2) {<BR>
+		this.field2 = field2;	<BR>
+	}	<BR>
+	<BR>
+	public DataType2 getField2() {<BR>
+		return field2;<BR>
+	}		<BR>
+	<BR>
+	public String say() {<BR>
+		return &quot;属性1描述:&quot; + field1 + &quot;,属性2描述:&quot; + field2 ....; 	<BR>
+	}	<BR>
+<BR>
+}<BR>
+<BR>
+main() {<BR>
+	ClassName cn = new ClassName();<BR>
+	cn.方法();<BR>
+}<BR>
+<BR>
+
+</DD>
+<DT>考试3</DT>
+<!--property:date_created=1481588994-->
+<!--property:date_modified=1481593134-->
+<DD>
+1.	类模板信息保存在内存中的什么位置, 里面包含了哪些信息, 类模板信息的特点和作用是什么?<BR>
+	堆中的永久区, 属性的定义信息, 方法代码(构造器). 特点是它的信息只有一份. <BR>
+	作用 : 在创建对象时唯一依据的. 	<BR>
+<BR>
+2.	数组是什么? 什么类型的数据可以创建数组?<BR>
+	一组相同类型的数据的集合体, 数组是对象类型.<BR>
+	任意数据类型都可以创建数组.<BR>
+<BR>
+3.	如何声明并创建数组? 有几种方式?<BR>
+	1) 动态方式 : 数组元素类型[] 数组名; (数组元素类型 数组名[]) , 创建数组对象:  数组名 = new 数组元素类型[长度];<BR>
+		优点 : 灵活, 容量大. 缺点 : 需要进一步对数组中的元素赋值.<BR>
+	2) 静态方式1 : 声明: 数组元素类型[] 数组名; 创建数组对象: 数组名 = new 数组元素类型[] {值1, 值2, 值3, 值4....};<BR>
+	3) 静态方式2 : 声明和创建必须在同一条语句 : 数组元素类型[] 数组名 = {值1, 值2, 值3, 值4...};<BR>
+		优点 : 数组一旦创建, 数据就就绪, 缺点 : 容量不宜过大.<BR>
+		<BR>
+	int arr[] = new int[5];<BR>
+	arr[0] = 10;<BR>
+	arr[1] = 20;<BR>
+	arr[2] = 30;<BR>
+	arr[3] = arr[0];<BR>
+	arr[4] = arr[1];<BR>
+	<BR>
+	int[] arr2 = new int[] {3,4,5,6,7};<BR>
+	int[] arr3 = {3,4,5,6,7};<BR>
+	<BR>
+	<BR>
+	空洞 : 引用数组中的值为null的元素<BR>
+<BR>
+4.	判断: <BR>
+	1) 数组的长度可以随意变化. 错!! <BR>
+	2) 数组的元素类型和数组类型是一回事. 错.<BR>
+	3) 数组的访问是通过数组名.下标实现的. 错.<BR>
+	4) 数组的访问方式是数组名(首地址) + 偏移算出来的.<BR>
+		数组名[偏移];<BR>
+	5) 数组的元素类型可以随意变化. 错<BR>
+		int[] arr = new int[5];<BR>
+		<BR>
+<BR>
+5.	Student[] stuArr = new Student[3]; // 1<BR>
+	stuArr[0] = new Student(20,&quot;小明&quot;,&quot;男&quot;);<BR>
+	stuArr[1] = new Student(30,&quot;小丽&quot;,&quot;女&quot;);<BR>
+	for (int i = 0; i &lt; stuArr.length; i++) {<BR>
+		System.out.println(stuArr[i].say());<BR>
+	}<BR>
+	<BR>
+	在1位置处有几个对象被创建, 什么对象? 1个 是Student引用数组.<BR>
+	以上的代码有没有问题? 如何改进? 有, 会出现空指针异常. 在调用方法之前先判断引用是否为空.<BR>
+
+</DD>
+<DT>复习3</DT>
+<!--property:date_created=1481589906-->
+<!--property:date_modified=1481851532-->
+<DD>
+对象关联 : 一个类的对象拥有另外一个类的对象, 在本类中就可以随意访问这个对象. 只需要把另外一个类的对象作为本类的属性即可.<BR>
+<BR>
+既然是属性, 可以显式初始化赋值, 也可以在构造器中初始化赋值, 甚至在set方法中也可以进一步赋值, 还需要在say方法中的字符串中拼接上.<BR>
+<BR>
+<BR>
+int[] arr = {3,9,2,0,8};<BR>
+<BR>
+// 冒泡<BR>
+for (int i = 0; i &lt; arr.length - 1; i++) {<BR>
+	for (int j = 0; j &lt; arr.length - 1 - i; j++) {<BR>
+		if (arr[j] &gt; arr[j + 1]) {<BR>
+			// 交换, 用数组元素类型的临时变量<BR>
+			int tmp = arr[j];<BR>
+			arr[j] = arr[j + 1];<BR>
+			arr[j + 1] = tmp;<BR>
+		}	<BR>
+	}<BR>
+}<BR>
+
+</DD>
+<DT>New node</DT>
+<!--property:date_created=1481935352-->
+<!--property:date_modified=1481935352-->
+</DL>
+
+</DD>
+<DT>第04章 高级类特性1</DT>
+<!--property:date_created=1481935355-->
+<!--property:date_modified=1481935355-->
+<DD>
+<DL>
+<DT>考试1</DT>
+<!--property:date_created=1481935367-->
+<!--property:date_modified=1481937650-->
+<DD>
+1.	什么是继承? 为什么要继承? 如何继承?<BR>
+	从现有类创建子类, 提高复用, 易于扩展. 子类 extends 父类.<BR>
+<BR>
+<BR>
+2.	子类能继承父类的私有成员吗? 如何处理?<BR>
+	能继承, 但是在子类不能直接访问, 必须通过父类的get/set方法间接访问.<BR>
+<BR>
+<BR>
+3.	为什么父类又叫基类或超类?<BR>
+	基类 : extends关键字<BR>
+	超类 : 在子类中使用super关键字, 访问从父类的成员<BR>
+<BR>
+<BR>
+4.	什么是方法覆盖? 方法覆盖有什么条件?<BR>
+	子类重写父类的方法. <BR>
+	条件: 1) 方法签名一致, 签名包括:返回值类型, 方法名, 参数列表(参数个数,类型,顺序)<BR>
+		2) 子类的访问控制修饰符大于等于父类的.<BR>
+		<BR>
+	四种访问控制修饰符<BR>
+	public			全局<BR>
+	protected			同类			同包的不同类			不同包的子类<BR>
+	default			同类			同包的不同类<BR>
+	private			本类<BR>
+	<BR>
+	A {<BR>
+		void m(int n) {}	<BR>
+	}<BR>
+	B {<BR>
+		void m() {}	<BR>
+	}<BR>
+<BR>
+5.	如果A类被B类继承,B类又被C类继承, 在所有类中都有一个方法test(), <BR>
+	创建C类对象,调用test()方法,执行的是哪个类的方法? 在C类中有几个test()方法?<BR>
+	执行的是C类的方法, 在C类中有2个test方法, 一个是this.test(), 另一个是super.test()<BR>
+	<BR>
+	<BR>
+	<BR>
+	
+</DD>
+<DT>复习</DT>
+<!--property:date_created=1481937667-->
+<!--property:date_modified=1481939751-->
+<DD>
+关于构造器 <BR>
+	1) 所有的类都必须有构造器<BR>
+	2) 所有类的构造器的执行都必须调用父类构造器并且晚于父类构造器<BR>
+		1) 在子类构造器中的第一行, 总是有一个缺省的super()语句存在!!	<BR>
+		2) 在子类构造器中的第一行, 不是super(...)就是this(...)<BR>
+
+</DD>
+<DT>考试2</DT>
+<!--property:date_created=1482108055-->
+<!--property:date_modified=1482110717-->
+<DD>
+1.	描述子类对象的创建过程(至少10步)<BR>
+	1) 检查要创建的对象所属的类模板, 及其所有父类的类模板. <BR>
+	2) 如果某些类模板不存在, 依次从父类到子类的顺序加载所有类模板.(把类.class文件读入内存), 并且只加载一次.<BR>
+	3) 如果所有类模板都已经存在了, 则不加载了.<BR>
+	4) 根据从父类到子类的顺序, 先查看父类模板中的属性的定义, 根据属性的定义开辟适当的空间<BR>
+	5) 把此空间写0<BR>
+	6) 再根据子类的类模板中的属性的定义, 开辟空间<BR>
+	7) 把此空间写0<BR>
+	8) 如果父类中有属性的显式赋值, 则执行显式赋值<BR>
+	9) 执行父类构造器<BR>
+	10) 如果子类中有属性的显式赋值, 则执行显式赋值<BR>
+	11) 执行子类构造器.<BR>
+<BR>
+2.	什么是多态? 如何在java中体现多态,如何使用?<BR>
+	同一个对象的多种父类形态, 用多态引用体现, 把子类对象的引用 赋值于 父类类型的引用变量. 把子类对象看作是父类类型的对象<BR>
+<BR>
+<BR>
+3.	什么是多态副作用?<BR>
+	子类特有的成员 被隐藏, 通过多态引用不能访问子类特有的成员.<BR>
+<BR>
+<BR>
+4.	什么是虚方法调用? 有什么特点?<BR>
+	在多态环境下的覆盖方法调用.<BR>
+	父类 引用 = new 子类();<BR>
+	引用.覆盖方法(); // 在父类中这个方法的目的 就是骗过编译器.  编译时检查父类类型<BR>
+	// 在子类中这个方法的目的, 是在运行时真正执行的代码. 运行时执行子类类型<BR>
+<BR>
+5.	instanceof 操作的符的作用是什么?<BR>
+	a instanceof B 作用是 判断a引用指向的对象实体, 是否是B类型的对象.<BR>
+	<BR>
+	if (a instanceof B) {	<BR>
+		B b = (B)a;//造型<BR>
+	}<BR>
+	
+</DD>
+</DL>
+
+</DD>
+<DT>第05章 高级类特性2</DT>
+<!--property:date_created=1482194699-->
+<!--property:date_modified=1482194699-->
+<DD>
+<DL>
+<DT>考试1</DT>
+<!--property:date_created=1482194715-->
+<!--property:date_modified=1482197319-->
+<DD>
+1.	描述equals方法和hashCode方法的含义和作用.<BR>
+	equals方法用于判断两个对象是否相等, obj1.equals(obj2); <BR>
+	hashCode方法用于返回一个对象的哈希码(特征码) 根据对象的属性计算出来的.<BR>
+<BR>
+2.	被static修饰的成员有什么特点?<BR>
+	和类相关的成员, 和对象无关, 不需要对象就已经存在了. <BR>
+<BR>
+<BR>
+3.	什么成员应该声明成静态的, 什么成员应该声明为非静态的?<BR>
+	属性, 每个对象都应该独立拥有的, 声明成非静态. 所有对象都共享的, 声明成静态的.<BR>
+	方法, 此行为和每个对象个体相关, 声明成非静态. 方法的执行不需要对象的参与 Math.random();<BR>
+<BR>
+<BR>
+4.	静态环境中可以直接访问非静态成员吗? 非静态环境中可以访问静态成员吗? 各自的原因是什么?<BR>
+	不可以 : 静态环境中,没有对象, 要想访问和对象相关的成员. 必须先创建对象, 再使用对象来访问<BR>
+	可以, 表明对象已经建立, 所以再通过对象找到相应的类模板信息, 再进一步访问.<BR>
+<BR>
+<BR>
+5.	写出饿汉式单例代码<BR>
+	class Singleton {<BR>
+		private Singleton() {}<BR>
+		private static Singleton only = new Singleton();<BR>
+		public static Singleton getInstance() {<BR>
+			return only;		<BR>
+		}	<BR>
+	}
+</DD>
+<DT>考试2</DT>
+<!--property:date_created=1482281171-->
+<!--property:date_modified=1482283301-->
+<DD>
+1.	静态代码块和非静态代码块各自有什么作用?<BR>
+	static {} ,  {} 可以初始化<BR>
+	静态 是在类加载时执行仅有的一次, 所以可以对类中的静态成员作初始化工作. <BR>
+	非静态 是在对象创建时执行一次, 和构造器一样, 对对象成员作初始化工作.<BR>
+<BR>
+2.	final可以修饰什么? 被修饰的元素具有什么特点?<BR>
+	final<BR>
+	可以修饰类,  表明类不能有子类<BR>
+	可以修饰方法, 表明方法不能被子类覆盖<BR>
+	可以修饰变量, 表明这个量是final量, 只能赋值一次, 不能再赋值了.<BR>
+	<BR>
+	空final属性, 非常危险, 必须在所有构造器中为其一次赋值, 或者可以在动态语句块中对其一次赋值.<BR>
+<BR>
+3.	抽象类是什么? 和具体类的区别是什么?<BR>
+	对同一大类的不同种事物的抽象定义. <BR>
+	1) 抽象类中可以包含抽象方法, 具体类不能包含抽象方法<BR>
+	2) 抽象类不能创建对象.<BR>
+<BR>
+<BR>
+4.	判断 : <BR>
+	1) 抽象类中必须包含抽象方法, 错 <BR>
+	2) 抽象类中不能包含普通方法, 错<BR>
+	3) 抽象类中可以包含抽象方法 对<BR>
+	4) 抽象类不能创建对象, 所以可以省略构造器 错<BR>
+	5) 具体类最多允许包含1个抽象方法 错<BR>
+	6) 抽象类主要用于被具体子类继承,具体子类可以不必理会抽象父类中的抽象方法 错<BR>
+	7) 具体类中如果包含抽象方法, 编译出错 对<BR>
+	8) 一个类中如果包含抽象方法, 这个类必须是抽象类 对<BR>
+	9) 抽象类中必须包含属性,构造器和普通方法和抽象方法. 错<BR>
+	10) 抽象类中可以不包含抽象方法,具体子类必须实现全部的父类的抽象方法. 对<BR>
+<BR>
+5.	什么是接口? 作用是什么?<BR>
+	接口是不同类不同种事物的共同行为.<BR>
+	接口中可以有属性, 但是只能全局常量, 抽象方法.<BR>
+	作用是被具体子类实现.<BR>
+<BR>
+	接口的实际应用是表达一种能力, 或者是一种标准.<BR>
+<BR>
+<BR>
+		
+</DD>
+<DT>New node</DT>
+<!--property:date_created=1482202191-->
+<!--property:date_modified=1482218522-->
+<DD>
+具体类 : 对现实世界一种事物的抽象定义.<BR>
+抽象类 : 对现实世界同一类不同种事物的抽象定义.<BR>
+接口 : 对现实世界不同类型的不同种事物的共同行为的抽象定义.<BR>
+<BR>
+抽象类中可以包含抽象方法.<BR>
+具体类绝不能包含抽象方法.<BR>
+<BR>
+如果一个类中包含了抽象方法, 它必须是抽象类.<BR>
+ <BR>
+抽象方法: 只有方法签名, 没有方法体. 因为没有方法体,所以不能执行!!<BR>
+<BR>
+抽象类被abstract修饰<BR>
+public abstract class Pet {<BR>
+	public abstract void eat();<BR>
+}
+</DD>
+<DT>考试3</DT>
+<!--property:date_created=1482452702-->
+<!--property:date_modified=1482456940-->
+<DD>
+1.	抽象类和接口的比较<BR>
+	<BR>
+	比较项目							抽象类							接口<BR>
+	定义							同一类型不同种事物				不同类型的不同种事物的共同行为<BR>
+	组成						属性, 普通方法,构造器,抽象方法				全局常量和抽象方法<BR>
+	如何使用							被继承							被实现<BR>
+	两者关系						抽象类可以实现接口					接口继承接口,多继承<BR>
+	常见设计模式						模板设计						代理和工厂<BR>
+	创建对象							不能,有子类对象					不能, 有具体实现子类<BR>
+	局限性							单继承							没有<BR>
+	实际应用							模板							表达一种能力或一种标准<BR>
+	选择										优先选择接口<BR>
+	<BR>
+	面向接口 : 屏蔽实现子类的细节和特点, 只看作是一个接口类型<BR>
+	<BR>
+	框架 : 至少得多个类, 也会通常包含一些接口, 最关注的是接口.<BR>
+	<BR>
+2.	描述什么是代理设计模式.<BR>
+	用代理对象代替被代理对象来使用.<BR>
+<BR>
+<BR>
+3.	如何在其他测试类中创建普通内部类对象?什么是匿名内部类? 如何使用?<BR>
+	class A {<BR>
+		class B{}	<BR>
+	}<BR>
+	class C {<BR>
+		main() {<BR>
+			A.B ab = new A().new B();		<BR>
+		}	<BR>
+	}<BR>
+	<BR>
+	在方法中 <BR>
+	new 父类|接口() {<BR>
+		类体部分, 匿名内部类就是父类|接口的子类	<BR>
+	}.方法();<BR>
+<BR>
+4.	什么是枚举? 如何获取枚举对象,列出3种方法<BR>
+	对象是可列举的类型. <BR>
+	enum 枚举名 {<BR>
+		常量对象1, 常量对象2, 常量对象3	<BR>
+	}<BR>
+	<BR>
+	1) 枚举名.常量对象名<BR>
+	2) 枚举名.valueOf(&quot;常量对象名&quot;);<BR>
+	3) 枚举名.values()[下标] <BR>
+<BR>
+<BR>
+5.	什么是注解? 如何在注解中声明属性? 如何规范注解的保留期?<BR>
+	注解是一种特殊的注释<BR>
+	<BR>
+	@Retention(RetentionPolicy.RUNTIME)<BR>
+	@interface 注解名 {<BR>
+		数据类型 属性名() default 缺省值;<BR>
+	}<BR>
+	<BR>
+	@注解名(属性=值, 属性=值)<BR>
+	被注解的元素(包,类,属性,方法,构造器,形参,局部变量)<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+	
+</DD>
+</DL>
+
+</DD>
+<DT>第06章 异常</DT>
+<!--property:date_created=1482539280-->
+<!--property:date_modified=1482541858-->
+<DD>
+1	异常按照处理方式分为几种? 各包含哪些类?<BR>
+	1) 受检异常<BR>
+		Exception及其子类 RuntimeException及其子类除外 <BR>
+	2) 非受检异常<BR>
+		Error及其子类, RuntimeException及其子类<BR>
+<BR>
+2	判断<BR>
+	1) 非受检异常就是必须不要处理的异常 错<BR>
+	2) 受检异常就是可以处理的异常 错<BR>
+	3) 非受检异常是不必须处理的异常 对<BR>
+	4) 受检异常可以对其忽略 错<BR>
+	5) 无论是什么异常,都必须对其进行处理 错<BR>
+	6) 只有受检异常会引起程序中断 错<BR>
+	7) 受检异常是必须对其进行处理的异常 对<BR>
+	8) 只有非受检异常会引起程序中断 错<BR>
+	9) 异常处理只适用于受检异常 错<BR>
+	10) 异常处理适用于所有异常, 包括Error 对<BR>
+<BR>
+3	异常的处理有几种方式, 各是什么<BR>
+	1) 捕获 try catch finally, try catch, try finally<BR>
+	2) 抛出 在方法声明中使用throws 异常类1, 异常类2... 作用是警告调用者此方法有风险. 在方法体中throw 异常对象.<BR>
+	3) 先捕获再抛出 先捕获已知系统异常, 然后将其包装为自定义异常.<BR>
+<BR>
+4	异常的处理选择有什么原则?<BR>
+	顶层方法选择捕获处理<BR>
+	底层方法选择抛出异常<BR>
+<BR>
+<BR>
+5	方法覆盖条件中对于异常的描述是什么?<BR>
+	子类方法抛出的受检异常范围要小于等于父类方法抛出的受检异常<BR>
+<BR>
+<BR>
+	
+</DD>
+<DT>第07章 常用类</DT>
+<!--property:date_created=1482799515-->
+<!--property:date_modified=1482803025-->
+<DD>
+1.	包装类的作用是什么? 包装类有哪些? 如何使用包装类把字符串转换成相应的基本数据类型?<BR>
+	把基本数据类型包装成对象类型, <BR>
+	boolean		Boolean<BR>
+	byte			Byte<BR>
+	short		Short<BR>
+	char			Character<BR>
+	int			Integer<BR>
+	long			Long<BR>
+	float			Float<BR>
+	double		Double<BR>
+	<BR>
+	包装类.parseXxx(String); 字符串中的内容必须和对应基本数据类型数据格式一致.<BR>
+	基本数据类型 -&gt; 字符串<BR>
+	1)	&quot;&quot; + 基本数据<BR>
+	2)	String.valueOf(...);// ...代表任意数据	<BR>
+	<BR>
+2.	什么是装箱, 什么是拆箱? 如何使用?<BR>
+	装箱 : 把基本数据类型变成对象  new 包装类(对应的基本数据)<BR>
+	拆箱 : 把对象中的数据取出来 对象.xxxValue() <BR>
+	<BR>
+3.	String和StringBuilder的区别是什么? StringBuilder和StringBuffer的区别又是什么?<BR>
+	String是内容不可改变的. 内部用char数组<BR>
+	StringBuilder是内容可以改变的.	内部用char数组<BR>
+	<BR>
+	效率问题: StringBuilder效率高, 线程不安全.<BR>
+	<BR>
+4.	问答:<BR>
+	String类中的方法 : <BR>
+		length() 作用是什么? 获取字符串对象中有多少个字符<BR>
+		获取指定的下标处的字符的方法是哪个? char charAt(int index)<BR>
+		int indexOf(String child, int start)的作用是什么, 其中参数是什么含义? 在当前字符串对象中从指定start下标处 从左向右查找参数中的子串首次出现的下标值<BR>
+		获取字符串的子串的方法是哪些? 分别描述参数的含义. <BR>
+			String substring(int begin, int end)// begin代表开始下标(包含) end代表结束下标(不包含)<BR>
+			String substring(int begin) // 获取从begin下标开始到结束的子串. <BR>
+		startsWith(String str)和endsWith(String str)的作用是什么?<BR>
+			判断是否以参数中的字符串为开始或为结束. <BR>
+			<BR>
+		比较字符串对象是否相等并忽略大小写的方法是?<BR>
+			boolean equalsIgnoreCase(String another)<BR>
+		String trim()方法的作用是什么?<BR>
+			把当前串中首尾空白字符去掉是, 返回新串, 空白字符就是码值&lt;= ' '<BR>
+			<BR>
+		把字符串中的所有大写字母变小写, 小写字母变大写的方法是什么?<BR>
+			toUpperCase(), toLowerCase()<BR>
+		String replace(char ch1, char ch2)作用是什么? 和replaceAll有什么区别?<BR>
+			替换当前串中所有旧字符为新字符, 区别就是参数类型不同<BR>
+			<BR>
+		把字符串以某个子串为切割器切割的方法是什么?<BR>
+			String[] split(String str);<BR>
+		获取字符串对应的字符数组方法是什么?<BR>
+			char[] toCharArray();<BR>
+			new String(char[] arr);<BR>
+	StringBuilder类中的方法:<BR>
+		在字符串后面追加内容的方法是? 可以是什么类型的参数?<BR>
+		StringBuilder append(...);  <BR>
+		在字符串的指定位置处插入新内容的方法是? 可以是什么类型的参数?<BR>
+		StringBuilder insert(int index, ...); <BR>
+<BR>
+5.	如何把当前时间显示成 2016年12月27日 8时46分?<BR>
+		Date d = new Date();<BR>
+		// long time = System.currentTimeMillis();<BR>
+		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日 H时m分&quot;);<BR>
+		String string = sdf.format(d); // sdf.format(time);<BR>
+		
+</DD>
+<DT>第08章 集合</DT>
+<!--property:date_created=1482886135-->
+<!--property:date_modified=1482888614-->
+<DD>
+1.	写出代码, 获取当前的年月日, 修改对象数据, 使对象代表的时间是2012-12-25日,<BR>
+	再获取此日期的500天以前的日期<BR>
+	Calendar ca = Calendar.getInstance();<BR>
+	ca.set(Calendar.YEAR, 2012);<BR>
+	ca.set(Calendar.MONTH, 11);<BR>
+	ca.set(Calendar.DAY_OF_MONTH, 25);<BR>
+	ca.add(Calendar.DAY_OF_MONTH, -500);<BR>
+	<BR>
+2.	Collection接口表示的集合, 存储数据有什么特点? 它的两个子接口分别是什么? 分别的存储数据的特点又是什么?<BR>
+	Collection : 保存无序可重复单个对象<BR>
+		Set : 保存无序不可重复 的单个对象<BR>
+			HashSet 用哈希算法实现的Set集合.<BR>
+			LinkedHashSet <BR>
+			TreeSet : 用二叉搜索树实现的Set集合<BR>
+		List : 保存有序可重复 的单个对象<BR>
+			ArrayList : 用数组实现的List集合 效率高, 线程不安全<BR>
+			Vector : 和ArrayList一样, 效率低, 线程安全.<BR>
+			LinkedList : 基于链表实现的List集合<BR>
+<BR>
+<BR>
+3.	ArrayList和LinkedList有区别吗? 区别是什么? 为什么能用链表实现List集合?<BR>
+	一个是基于数组, 另一个基于链表, 因为链表中的结点对象是线性排列<BR>
+<BR>
+<BR>
+4.	HashSet集合中是如何判断两个对象重复的? 要想让两个自定义对象重复, 如何才能做到?<BR>
+	两个对象调用equals为true, 并且两个对象的哈希码值相同.<BR>
+	必须在自定义类中重写equals和hashCode方法.<BR>
+<BR>
+<BR>
+5.	泛型的作用是什么? 如何使用?<BR>
+	限定集合中的元素对象的类型. 集合类&lt;元素类型&gt; 引用 = new 实现类&lt;元素类型&gt;();<BR>
+	<BR>
+	<BR>
+<BR>
+
+</DD>
+<DT>第09章 集合和泛型</DT>
+<!--property:date_created=1483057363-->
+<!--property:date_modified=1483061038-->
+<DD>
+1.	Collection集合和Map集合的区别是什么? Map集合存放的对象有什么特点? 列出Map中常用的方法,包括对象的保存,提取等.<BR>
+	Collection用于存放单个对象, Map用于存放具有映射关系的一对对象<BR>
+	map中的key 无序不可重复.<BR>
+	<BR>
+	Object put(Object key, Object value); // 返回值就是键对应的之前的值.<BR>
+	Object get(Object key);<BR>
+<BR>
+<BR>
+2.	如何使用迭代器遍历一个集合? 写出代码. 并加上注释, 说明注意点.<BR>
+	Iterator 迭代器 = 集合对象.iterator(); <BR>
+	// 集合内容发生变化 , 不要这样做.<BR>
+	while (迭代器.hasNext()) { // 这个方法仅用于检测<BR>
+		元素 = 迭代器.next(); // 在循环中只能调用一次<BR>
+	}<BR>
+<BR>
+<BR>
+3.	TreeSet可以保存的对象有什么特点? 能保存没有实现任何接口的类的对象吗? 如果非要保存这样的对象可以, 怎么做?<BR>
+	对象要同一类型. <BR>
+	能, 必须写一个自定义比较器,用于比较两个对象<BR>
+<BR>
+<BR>
+4.	如何处理一个包含多个参数配置的文本文件, 如何加载文件并读取其中的属性值?<BR>
+	Properties p = new Properties();<BR>
+	p.load(文件);<BR>
+	String value = p.getProperty(&quot;属性名&quot;);<BR>
+<BR>
+<BR>
+5.	如何声明带有泛型的自定义类? 在类中泛型参数有什么使用限制? 什么是泛型方法? 如何定义并使用?<BR>
+	public class 类名&lt;Y&gt; {<BR>
+		在非静态环境中类中就可以把Y作为某种类型,	<BR>
+	}<BR>
+	<BR>
+	new 类名&lt;实际类型&gt;();<BR>
+	<BR>
+	在方法中使用某种类型, 此类型在方法声明并实现时并不知道具体类型.<BR>
+	修饰符 &lt;T&gt; 返回值 方法名(参数中必须要使用T 作为形参) {<BR>
+		在方法中可以使用T这种类型.<BR>
+	}<BR>
+	<BR>
+	方法名(实参对象);<BR>
+<BR>
+
+</DD>
+<DT>第10章 IO</DT>
+<!--property:date_created=1483144272-->
+<!--property:date_modified=1483147252-->
+<!--property:expanded-->
+<DD>
+1.	写出下列流 : 字符输入流, 字节输出流, 字符输出流, 字节输入流. <BR>
+	字符输入流 : Reader<BR>
+	字节输出流 : OutputStream<BR>
+	字符输出流 : Writer<BR>
+	字节输入流 : InputStream<BR>
+<BR>
+2.	字节流和字符流的区别是什么? 在使用中选择用哪个依据什么?<BR>
+	字节流中处理的数据单位是字节(8bit)<BR>
+	字符流中处理的数据单位是字符(16bit)<BR>
+	<BR>
+	文本文件优先使用字符串, 非文本文件使用字节流.<BR>
+<BR>
+<BR>
+3.	如何读一个文件内容  写出详细步骤<BR>
+	FileReader fReader = null;<BR>
+	try {<BR>
+		fReader = new FileReader(&quot;文件名&quot;);<BR>
+		// 使用缓冲<BR>
+		char[] buf = new char[1024];<BR>
+		int realCount = fReader.read(buf);<BR>
+		while (realCount != -1) {<BR>
+			// 1) 处理已经读到的数据(处理实际的字符数)<BR>
+			for (int i = 0; i &lt; realCount; i++) {<BR>
+				处理buf[i];			<BR>
+			}<BR>
+			// 2) 继续读后面的数据,直到末尾<BR>
+			realCount = fReader.read(buf);<BR>
+		}<BR>
+	} catch (IOException e) {<BR>
+		e.printStackTrace();<BR>
+	} finally {<BR>
+		if (fReader != null) {<BR>
+			try {<BR>
+				fReader.close();			<BR>
+			} catch (IOException e) {<BR>
+				e.printStackTrace();<BR>
+			}<BR>
+		}	<BR>
+	}<BR>
+<BR>
+<BR>
+4.	如何写一些内容到文件中? 写出详细步骤<BR>
+	FileWriter fWriter = null;<BR>
+	try {<BR>
+		fWriter = new FileWriter(&quot;文件名&quot;);<BR>
+		String line = &quot;abcdefg&quot;;<BR>
+		char[] arr = line.toCharArray();<BR>
+		fWriter.write(arr, 3, 4); // 只写数组的一部分.<BR>
+		fWriter.write(10);<BR>
+	} catch (IOException e) {<BR>
+		e.printStackTrace();<BR>
+	} finally {<BR>
+		if (fWriter != null) {<BR>
+			try {<BR>
+				fWriter.close();			<BR>
+			} catch (Exception e) {}		<BR>
+		}	<BR>
+	}<BR>
+<BR>
+<BR>
+5.	为什么要关闭流对象?<BR>
+	流对象所使用的资源是从OS申请的, 必须归还OS.<BR>
+	<DL>
+<DT>复习</DT>
+<!--property:date_created=1483404365-->
+<!--property:date_modified=1483406536-->
+<DD>
+IO流 : 数据从源结点到目标结点的流动.<BR>
+结点  : 文件, 网络, 键盘, 显示器.<BR>
+<BR>
+根据流中的数据分为 字节流, 字符流.<BR>
+<BR>
+字节输入流 : InputStream<BR>
+字符输入流 : Reader<BR>
+字节输出流 : OutputStream<BR>
+字符输出流 : Writer<BR>
+<BR>
+结点为文件, File前缀<BR>
+结点流 : 低级流<BR>
+<BR>
+处理流 : 包装流, 高级流<BR>
+把其他的流进行包装处理的流, 不会改变原有流的方向和数据等. 并额外提供强大的方法.<BR>
+<BR>
+	1) 缓冲流 自带缓冲区 <BR>
+		Buffered前缀 <BR>
+			BufferedReader		<BR>
+				String readLine(); // 直接从输入流中读一行字符串<BR>
+			BufferedWriter<BR>
+				void newLine(); // 写入一个换行.<BR>
+			BufferedInputStream<BR>
+			BufferedOutputStream<BR>
+	<BR>
+	2) 对象流<BR>
+		ObjectOutputStream<BR>
+			void writeXxx(xxx value); // Xxx是任意基本数据类型, 以二进制方式.<BR>
+			void writeInt(10);<BR>
+				{<BR>
+					write(0);<BR>
+					write(0);<BR>
+					write(0);<BR>
+					write(10);			<BR>
+				}<BR>
+			void writeUTF(String str); // &quot;a我&quot; -&gt; 2个字节长度 0x65 0xE6 0x88 0x91 // 编码: 把字符串转变成字节数组<BR>
+				byte[] arr = str.getBytes(&quot;utf-8&quot;);<BR>
+				out.writeShort(arr.length);<BR>
+				out.write(arr, 0, arr.length);<BR>
+			对象序列化 : 把对象在GC区中的数据写入二进制流<BR>
+			void writeObject(Object obj); // 对象所属的类必须实现Serializable接口<BR>
+		ObjectInputStream<BR>
+			xxx readXxx();<BR>
+			String readUTF(); // 0x00 0x04<b> 0x65 0xE6 0x88 0x91 // 解码 : 把字节数组变成字符串 new String(buf, &quot;utf-8&quot;);</b><BR>
+			对象的反序列化<BR>
+			Object readObject();<BR>
+<BR>
+<BR>
+<BR>
+
+</DD>
+</DL>
+
+</DD>
+<DT>第11章 多线程</DT>
+<!--property:date_created=1483434469-->
+<!--property:date_modified=1483492820-->
+<!--property:expanded-->
+<DD>
+1. 	转换流的作用是什么? 如何使用?<BR>
+	把字节流转换为字符流, <BR>
+	InputStreamReader isr = new InputStreamReader(inputSteam, &quot;编码方式&quot;); // 把字节数组数据使用指定的编码方式进行字符串编码<BR>
+	OutputStreamWriter osw = new OutputStreamWriter(outputStream, &quot;编码方式&quot;);//<BR>
+	<BR>
+	InputStreamReader isr = new InputStreamReader(System.in);<BR>
+	<BR>
+2.	写出下列File类中的方法作用<BR>
+	String getName(); // 获取文件或目录的名称<BR>
+	String getAbsolutePath(); // 获取文件或目录的绝对路径<BR>
+	long length(); // 获取文件的长度<BR>
+	long lastModified(); // 获取文件最后修改时间<BR>
+	boolean canRead(); // 检测文件是否可读<BR>
+	boolean exists(); // 检测文件或目录是否存在<BR>
+	boolean createNewFile(); // 创建新文件,大小为0<BR>
+	boolean mkdir(); // 创建目录<BR>
+	File[] listFiles(); // 列出当前目录对象中的所有子目录和子文件的对象数组<BR>
+	boolean isFile(); // 是否是文件<BR>
+	boolean isDirectory(); // 是否是目录<BR>
+	<BR>
+3.	什么是程序? 什么是进程? 什么是线程?<BR>
+	程序 : 保存在硬盘上面的一段静态代码, 本质是一个文件. <BR>
+	进程 : 程序处于运行状态.有生命周期, 被OS管理<BR>
+	线程 : 进程中的一个子任务<BR>
+<BR>
+4.	为什么要使用多线程?<BR>
+	1) 多进程不能方便地通信.<BR>
+	2) 提高效率, 提高CPU使用率<BR>
+	3) 多任务<BR>
+	4) 如果有大量的需要等待的任务, 交给线程去做.<BR>
+	5) 后台处理. (GC, 错误输出)<BR>
+<BR>
+5.	如何创建并启动一个线程?<BR>
+	1) 写一个具体类 实现Runnable接口, 并实现其中的run方法, 这个方法就相当于线程的入口方法.<BR>
+	2) 创建上面的类的对象, 以对象为实参, 再创建Thread对象, 这个对象就是一个线程对象.<BR>
+	3) 调用线程对象的start()方法.<BR>
+<BR>
+<BR>
+<BR>
+		<DL>
+<DT>考试2</DT>
+<!--property:date_created=1483663193-->
+<!--property:date_modified=1483665540-->
+<DD>
+多线程 : 为什么要使用? 线程可以直接被CPU调度. <BR>
+线程间通信方便, 因为多个线程在同一个进程中. <BR>
+<BR>
+创建并启动线程:<BR>
+	1) 实现的方式<BR>
+		1) 写一个具体类, 实现Runnable接口, 并实现其中的抽象方法run(), 这个方法相当于线程入口方法.<BR>
+		2) 创建上面类的对象, 并以这个对象为实参, 创建Thread对象. (线程处于新建), 暗含一个栈的创建<BR>
+		3) 调用线程对象的start方法, 激活栈, 把线程的run方法压入栈底. (线程处于就绪, 一旦获取到执行权, 就进入运行状态)<BR>
+	2) 继承的方式<BR>
+		1) 写一个具体类, 继承Thread类, 并重写父类的run方法, 这个方法就是线程的入口方法<BR>
+		2) 创建对象, 相当于创建了Thread对象<BR>
+		3) 调用对象的start方法.<BR>
+		<BR>
+线程的方法 : <BR>
+	获取当前线程的对象?<BR>
+	static Thread currentThread();<BR>
+	让当前线程进入阻塞.<BR>
+		1) static void sleep(long millis) throws InterruptedException;<BR>
+		2) 别的线程对象.join();<BR>
+		3) 在同步块中,调用锁对象.wait().<BR>
+	获取线程名字,或设置名字<BR>
+	void setName(String name); String getName();<BR>
+	<BR>
+	设置为守护线程<BR>
+	void setDaemon(boolean daemon);<BR>
+	<BR>
+	打断线程的阻塞(sleep, join, wait)<BR>
+	void interrupt();<BR>
+	<BR>
+	过时不要用的方法:<BR>
+	stop, suspend, resume	<BR>
+	<BR>
+通过在线程体方法中添加一个boolean变量的方式, 通过控制循环实现线程的控制.<BR>
+<BR>
+线程的安全问题 : 多个线程同时访问同一个数据.<BR>
+	<BR>
+	避免 : 在对数据的修改的语句上添加同步块.<BR>
+	<BR>
+synchronized (互斥锁对象) { // 互斥锁对象必须是多个线程共享的<BR>
+	语句1;<BR>
+	语句2;<BR>
+	互斥锁对象.wait(); // 放锁, 同时进入等待状态, 只能由其他线程调用本锁对象的.notity方法解除等待状态, 但是马上进入的是等锁状态<BR>
+	语句3;<BR>
+}<BR>
+<BR>
+锁的释放  :<BR>
+	1) 正常执行完同步块<BR>
+	2) 在同步块中任意位置出现异常或Error<BR>
+	3) 在同步块中调用了锁对象的wait方法.<BR>
+		<BR>
+	<BR>
+
+</DD>
+</DL>
+
+</DD>
+<DT>第12章 反射</DT>
+<!--property:date_created=1483750236-->
+<!--property:date_modified=1483751370-->
+<DD>
+package a.b.c; <BR>
+<BR>
+public class 类名 {<BR>
+<BR>
+	public DateType1 field1;<BR>
+	private DataType2 field2;<BR>
+	<BR>
+	public void test1() {}<BR>
+	<BR>
+	private static String test2(int n, double d) {<BR>
+		return n + d + &quot;&quot;;	<BR>
+	}<BR>
+}<BR>
+<BR>
+main() {<BR>
+	// 加载类并获取类模板对象<BR>
+	Class clazz= Class.forName(&quot;a.b.c.类名&quot;); // 在永久区中检查有无此类, 如果没有才加载一次, 类要初始化, 静态成员的初始化, 执行静态语句块<BR>
+	Object object = clazz.newInstance();<BR>
+	// 先获取属性定义对象<BR>
+	Field f1 = clazz.getField(&quot;field1&quot;); <BR>
+	f1.set(object, 新值); // object.field1 = 新值;<BR>
+	Object value = f1.get(object);<BR>
+	<BR>
+	Field f2 = clazz.getDeclaredField(&quot;field2&quot;);<BR>
+	f2.setAccessable(true);<BR>
+	f2.set(object, 新值2);<BR>
+	Object value2 = f2.get(object);<BR>
+	<BR>
+	Object[] value = {新值11, 新值22};<BR>
+	Field[] fds = clazz.getDeclaredFields();	<BR>
+	for (int i = 0; i &lt; fds.length; i++) {<BR>
+		fds[i].setAccessable(true);<BR>
+		fds[i].set(object, value[i]);	<BR>
+	}<BR>
+	<BR>
+	// 先获取方法对象<BR>
+	Method m1 = clazz.getMethod(&quot;test1&quot;);<BR>
+	m1.invoke(object); <BR>
+	<BR>
+	Method m2 = clazz.getDeclaredMethod(&quot;test2&quot;, int.class, double.class);<BR>
+	Object retValue = m2.invoke(null, 10, 2.0);<BR>
+	<BR>
+}
+</DD>
+<DT>eclipse快捷</DT>
+<!--property:date_created=1482300360-->
+<!--property:date_modified=1482302193-->
+<DD>
+ctrl + d 快速删除一行<BR>
+ctrl + alt + 下方向<BR>
+ctrl + 1 给光标所在的错误提供一些处理方案<BR>
+ctrl + shift + f 格式化代码<BR>
+alt + 上下方向, 可以把选中的代码整体上移或下移<BR>
+shift + 回车, 直接换到新行<BR>
+f11 运行程序<BR>
+<BR>
+在debug模式下<BR>
+F5 进入方法的细节.<BR>
+F6 是一行一行的快速执行<BR>
+F7 使正在执行的方法直接执行完毕 <BR>
+F8 直接执行到程序结束 或 到下一个断点处.
+</DD>
+</DL>
+</BODY>
+</HTML>

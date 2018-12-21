@@ -1,0 +1,51 @@
+mkdir  XX:  创建一个名为XX的目录  
+
+pwd : 显示当前目录路径
+
+git init : 把当前的目录变成可以管理的GIT仓库，生成隐藏 .git文件。
+
+touch :  用法类似VIM
+
+git add __ : 把文件存到暂存区
+
+git commit -m "__" : 提交到本地库并注释
+
+git status : 查看仓库状态
+
+git diff __ : 查看某文件修改了那些内容
+
+git log : 查看历史纪录
+
+git reset --hard HEAD^ : 版本回退一个（^ 用来表示回退几个版本）
+
+cat __.file : 查看文件内容
+
+git reflog : 查看历史记录的版本号ID
+
+git checkout -- __.file :  把某文件在工作区的修改全部撤销
+
+git rm __ : 删除某文件
+
+git remote add origin URL : 关联一个远程库
+
+git push -u origin master : 把当前分支推送到远程库
+
+git clone URL : 从远程库中克隆
+
+git checkout -b dev : 创建分支并切换到该分支
+
+git branch : 查看当前所有的分支
+
+git checkout master : 切换到某分支
+
+git merge dev :  在当前分支上合并DEV分支
+
+git branch -d dev : 删除DEV分支
+
+git branch name : 创建分支
+
+git remote : 查看远程库的信息
+
+git remote -v : 查看远程库详细信息
+
+git push origin master : 把master分支推送到远程库的对应master分支上
